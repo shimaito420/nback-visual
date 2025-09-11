@@ -4,9 +4,17 @@
 
 // --- import 削除 ---
 // import { core, data, sound, util, visual, hardware } from './lib/psychojs-2024.2.4.js';
+import * as core from "https://lib.pavlovia.org/core-2024.2.4.js";
+import * as data from "https://lib.pavlovia.org/data-2024.2.4.js";
+import * as sound from "https://lib.pavlovia.org/sound-2024.2.4.js";
+import * as util from "https://lib.pavlovia.org/util-2024.2.4.js";
+import * as visual from "https://lib.pavlovia.org/visual-2024.2.4.js";
+import * as hardware from "https://lib.pavlovia.org/hardware-2024.2.4.js";
 
 // PsychoJS のモジュールをグローバル psychoJS から参照
-const { PsychoJS } = psychoJS.core;
+const psychoJS = new core.PsychoJS({
+  debug: true
+});
 const { TrialHandler, MultiStairHandler } = psychoJS.data;
 const { Scheduler } = psychoJS.util;
 //some handy aliases as in the psychopy scripts;
@@ -637,3 +645,4 @@ function quitPsychoJS(message, isCompleted) {
   psychoJS.quit({message: message, isCompleted: isCompleted});
   return Scheduler.Event.QUIT;
 }
+
