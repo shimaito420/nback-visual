@@ -179,17 +179,16 @@ async function experimentInit() {
   
   // Initialize components for Routine "inst2"
   inst2Clock = new psychoJS.util.Clock();
-  text_3 = new psychoJS.visual.TextStim({
-    win: psychoJS.window,
-    name: 'text_3',
-    text: 'This is '2-back' \ncondition\n\nPlease enter '1', \nif the target is same \nto the target n before\n\nPlease enter 'Q', \nif the target is not same \nto the target n before\n\nif you can understand, please press the space key.',
-    font: 'Open Sans',
-    units: undefined, 
-    pos: [0, 0], draggable: false, height: 36.0,  wrapWidth: undefined, ori: 0.0,
-    languageStyle: 'LTR',
-    color: new psychoJS.util.Color('white'),  opacity: undefined,
-    depth: 0.0 
-  });
+  text_3 = new visual.TextStim({
+  win: psychoJS.window,
+  name: 'text_3',
+  text: "This is '2-back'\ncondition\n\nPlease enter '1', \nif the target is same \nto the target n before\n\nPlease enter 'Q', \nif the target is not same \nto the target n before\n\nIf you understand, please press the space key.",
+  font: 'Open Sans',
+  pos: [0, 0],
+  height: 36.0,
+  color: new util.Color('white')
+});
+
   
   key_resp = new psychoJS.core.Keyboard({psychoJS: psychoJS, clock: new psychoJS.util.Clock(), waitForStart: true});
   
@@ -625,5 +624,6 @@ function quitPsychoJS(message, isCompleted) {
   psychoJS.quit({message: message, isCompleted: isCompleted});
   return Scheduler.Event.QUIT;
 }
+
 
 
