@@ -182,7 +182,7 @@ async function experimentInit() {
   text_3 = new psychoJS.visual.TextStim({
     win: psychoJS.window,
     name: 'text_3',
-    text: 'This is \\'2-back\\' \\ncondition\\n\\nPlease enter \\'1\\', \\nif the target is same \\nto the target n before\\n\\nPlease enter \\'Q\\', \\nif the target is \"not\" same \\nto the target n before\\n\\nif you can understand, please press the space key.',
+    text: 'This is '2-back' \ncondition\n\nPlease enter '1', \nif the target is same \nto the target n before\n\nPlease enter 'Q', \nif the target is not same \nto the target n before\n\nif you can understand, please press the space key.',
     font: 'Open Sans',
     units: undefined, 
     pos: [0, 0], draggable: false, height: 36.0,  wrapWidth: undefined, ori: 0.0,
@@ -625,4 +625,5 @@ function quitPsychoJS(message, isCompleted) {
   psychoJS.quit({message: message, isCompleted: isCompleted});
   return Scheduler.Event.QUIT;
 }
+
 
